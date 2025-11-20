@@ -1,65 +1,77 @@
-import Image from "next/image";
+// File: src/app/page.tsx
+import Image from 'next/image';
+import Link from 'next/link';
+import ProjectCard from '@/components/ProjectCard'; // <-- Import ProjectCard
+import { PROJECTS } from '@/lib/data';             // <-- Import our real data
 
 export default function Home() {
+  // We'll feature the first 3 projects from our data file
+  const featuredProjects = PROJECTS.slice(0, 3);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      {/* Hero Section (already built) */}
+      <section className="bg-blue-950 text-white py-20 md:py-32">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="flex items-center gap-8">
+              <Image
+                src="/Me-passport-photo-latest.jpg" 
+                alt="Calistus Mwonga"
+                width={128}
+                height={128}
+                className="rounded-full border-4 border-blue-700 object-cover"
+                priority
+              />
+              <div>
+                <h1 className="text-4xl lg:text-5xl font-bold">
+                  Calistus Musyimi Mwonga
+                </h1>
+                <p className="text-lg lg:text-xl text-blue-300 font-semibold mt-1">
+                  Data Scientist & Machine Learning Engineer
+                </p>
+                <p className="mt-2 text-gray-300 max-w-xl">
+                  I architect and deploy end-to-end AI systems, transforming complex models into tangible, product-driven solutions.
+                </p>
+                <Link href="/projects" passHref>
+                  <button className="mt-6 bg-white text-blue-950 font-bold py-3 px-8 rounded-md hover:bg-gray-200 transition-colors duration-300">
+                    Explore All Projects
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 0L200 100L100 200L0 100L100 0Z" fill="rgba(66, 153, 225, 0.1)"/>
+                <path d="M100 20L180 100L100 180L20 100L100 20Z" stroke="rgba(66, 153, 225, 0.5)" strokeWidth="2"/>
+                <circle cx="100" cy="100" r="30" stroke="rgba(66, 153, 225, 0.7)" strokeWidth="2"/>
+              </svg>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* --- NEW: Featured Projects Section --- */}
+      <section className="bg-gray-800 py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Featured Projects
+          </h2>
+          {/* This is the horizontal grid for the homepage */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredProjects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                imageUrl={project.imageUrl}
+              />
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
