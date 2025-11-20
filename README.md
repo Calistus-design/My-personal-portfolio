@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calistus Musyimi Mwonga | Data Scientist & Machine Learning Engineer
 
-## Getting Started
+### My Professional Portfolio: Transforming Complex Models into Tangible Solutions
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**[Visit my live portfolio site here!](YOUR_VERCEL_DEPLOYMENT_URL_HERE)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📖 Overview
 
-## Learn More
+This repository hosts my professional portfolio website, meticulously crafted to showcase my expertise as an AI Engineer and Full-Stack Developer. The site features a multi-page architecture, providing in-depth case studies for each project, and is designed for an impeccable user experience across all devices.
 
-To learn more about Next.js, take a look at the following resources:
+My portfolio is a direct demonstration of my ability to not only leverage cutting-edge AI/ML models but also to architect, build, and deploy the complete, end-to-end applications that bring these intelligent systems to life.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features of This Portfolio Website
 
-## Deploy on Vercel
+*   **Multi-Page Architecture:** Dedicated pages for Home, Projects (archive), individual Case Studies, About, and Contact, offering a structured and scalable content delivery.
+*   **Dynamic Project Showcasing:** Project details are managed centrally in `src/lib/data.ts` and dynamically rendered across the site, making content updates efficient and seamless.
+*   **In-Depth Case Studies:** Each project features a comprehensive deep-dive, detailing the problem statement, methodology (including interactive architecture diagrams where applicable), results, and business impact.
+*   **Modern UI/UX:** Clean, minimalist design with a dark theme, ensuring high readability and a professional aesthetic.
+*   **Fluid Animations & Transitions:** Utilizes `Framer Motion` for smooth page transitions and engaging on-scroll reveal animations, enhancing the overall user experience and perceived quality.
+*   **Fully Responsive:** Optimized for desktop, tablet, and mobile viewing, guaranteeing accessibility and usability on any device.
+*   **Professional Branding:** Consistent typography, color palette, and clear navigation reinforce my professional identity.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Technologies Used
+
+This portfolio is built with a modern and robust technology stack:
+
+*   **Next.js 15 (App Router):** React framework for building fast, scalable web applications.
+*   **React:** JavaScript library for building user interfaces.
+*   **TypeScript:** Superset of JavaScript that adds static types, improving code quality and maintainability.
+*   **Tailwind CSS:** Utility-first CSS framework for rapid and consistent styling.
+*   **Framer Motion:** Production-ready motion library for React, enabling fluid animations and transitions.
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+To run this portfolio website locally on your machine, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Calistus-design/my-personal-portfolio.git
+    cd my-personal-portfolio
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+    *(Note: Ensure you are using a stable Node.js version and that Tailwind CSS v3 is correctly installed as per the project setup. If you encounter issues, perform `npm uninstall tailwindcss postcss autoprefixer` and then `npm install -D tailwindcss@^3.4.1 postcss@^8.4.31 autoprefixer@^10.4.1`)*.
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in browser:**
+    Navigate to `http://localhost:3000` in your web browser.
+
+---
+
+## 🌐 Deployment
+
+This application is designed for seamless deployment on platforms like Vercel.
+
+1.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+2.  **Start production server:**
+    ```bash
+    npm run start
+    ```
+    *(For actual deployment, connect your GitHub repository to Vercel for automatic continuous deployment.)*
+
+---
+
+## ✉️ Connect with Me
+
+*   **LinkedIn:** [linkedin.com/in/your-linkedin-profile](https://linkedin.com/in/your-linkedin-profile) *(Replace with your actual LinkedIn URL)*
+*   **GitHub:** [github.com/Calistus-design](https://github.com/Calistus-design)
+*   **Email:** [your.email@example.com](mailto:your.email@example.com) *(Replace with your actual email address)*
+
+---
+
+## © License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
