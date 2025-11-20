@@ -1,4 +1,7 @@
 // File: src/app/page.tsx
+
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard'; // <-- Import ProjectCard
