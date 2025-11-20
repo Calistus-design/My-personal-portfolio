@@ -99,5 +99,43 @@ export const PROJECTS: Project[] = [
     ],
 
     impact: ["This project is a successful proof-of-concept for a real-world tool that can provide reliable and trustworthy information to disaster response teams. By automating the initial screening of satellite imagery and providing clear, explainable insights, this system can help free up human experts to focus on the most critical, high-risk cases. This project is a complete, end-to-end data science workflow from a raw business problem to a deployed, value-driven AI application."]
+  },
+  {
+    slug: "africa-credit-challenge",
+    title: "Africa Credit Challenge: Predicting Loan Default",
+    subtitle: "From Raw Data to an Actionable, Business-Ready Credit Scoring System",
+    description: "An end-to-end data science project that predicts loan default from transactional data. I performed deep EDA and advanced feature engineering, compared multiple models to select a champion, and built a practical 5-tier credit scoring system for business use.",
+    tags: ["Python", "Pandas", "Scikit-learn", "XGBoost", "LightGBM", "CatBoost", "Feature Engineering", "Classification"],
+    imageUrl: "/credit-scoring.jpg", // TODO: Replace with a compelling image for this project
+    mainImageUrl: "/credit-scoring.jpg", // TODO: Replace with your actual main project image path
+    codeUrl: "https://github.com/Calistus-design/Africa-Credit-Scoring", // TODO: Replace with your GitHub repo link
+    
+    problemStatement: [
+      "The core challenge of this project was to tackle a real-world loan default problem defined by severe class imbalance. With only a tiny fraction of loans (1.8%) resulting in a default, a standard model could achieve over 98% accuracy by simply guessing 'No Default' every time. The true business problem, therefore, was not just to be accurate, but to build a model that could reliably find this 'needle in the haystack'—the small group of high-risk applicants—without incorrectly flagging a large number of good customers."
+    ],
+    
+    methodology: [
+      "**1. Deep Exploratory Data Analysis (EDA):** I started by diving deep into the data to uncover the key drivers of default. The analysis revealed several powerful signals: 'New Loan' customers were over 10 times more likely to default than 'Repeat Loan' customers; specific loan types carried significantly higher risk (some with >70% default rates); and defaulters generally took out larger loans for longer durations.",
+
+      "**2. Advanced Feature Engineering:** To give the model a richer understanding of customer behavior, I engineered two crucial sets of features. First, I extracted time-based features like the month and day of the week from the loan disbursement date. More importantly, I created a historical profile for each borrower by performing **customer-level aggregation**. This generated powerful new features like a customer's average loan amount, their total number of loans, and the standard deviation of their borrowing, transforming the dataset from individual transactions into a story of customer behavior.",
+
+      "**3. Iterative Model Development & Selection:** I built and rigorously evaluated a series of models to find the best solution. I started with a simple Logistic Regression to establish a baseline F1-Score of 0.22. I then demonstrated a massive performance leap by using a Random Forest (F1-Score: 0.57). Finally, I trained and compared three industry-standard gradient boosting models: **XGBoost, LightGBM, and CatBoost**. Throughout this process, I used stratified k-fold cross-validation to ensure the results were stable and reliable.",
+
+      "**4. Creation of a Business-Ready Credit Scoring System:** The final, and most critical, step was to translate the model's technical output (a raw probability) into a practical tool for business users like loan officers. I analyzed the distribution of the champion model's predictions and designed a data-driven, **5-tier credit scoring function**. This system automatically segments applicants into clear, actionable categories (from 'Very Low Risk' to 'Very High Risk') and provides a recommended business action for each, such as 'Auto-Approve' or 'Requires Manual Review'."
+    ],
+    
+    resultsAndInsights: [
+      "The **XGBoost model emerged as the clear champion**, achieving a phenomenal F1-Score of **0.75**, a massive improvement over the baseline and a significant lift over the Random Forest model. This demonstrates the power of gradient boosting for this type of complex, tabular dataset.",
+
+      "The performance was also highly stable, with a very low standard deviation across all cross-validation folds. This gives high confidence that the model's performance is real and would generalize well to new, unseen data.",
+      
+      "A key insight from analyzing the model's predictions was that the distribution of default probabilities was strongly bimodal. The model was highly confident in its decisions, with a large peak of predictions near 0 (very safe) and a smaller, distinct peak near 1 (very risky), with very few 'unsure' predictions in the middle. This clear separation is the hallmark of a well-calibrated model and is what enabled the design of the effective 5-tier scoring system."
+    ],
+    
+    impact: [
+      "This project goes beyond a simple prediction model; it provides a complete blueprint for an automated, data-driven risk assessment tool. The credit scoring system allows a business to instantly segment applicants, automate decisions for the most clear-cut cases ('Very Low Risk' and 'Very High Risk'), and strategically focus the valuable time of human underwriters on the more ambiguous 'Medium Risk' cases.",
+      
+      "It showcases a full, end-to-end data science workflow—from understanding a raw business problem and performing deep analysis to building, evaluating, and ultimately translating a high-performance model into a practical, value-driven business solution."
+    ]
   }
 ];
