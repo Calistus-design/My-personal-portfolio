@@ -86,9 +86,9 @@ This application is designed for seamless deployment on platforms like Vercel.
 
 ## ✉️ Connect with Me
 
-*   **LinkedIn:** [linkedin.com/in/your-linkedin-profile](https://www.linkedin.com/in/calistus-mwonga)
+*   **LinkedIn:** [linkedin.com/in/calistus-mwonga](https://www.linkedin.com/in/calistus-mwonga)
 *   **GitHub:** [github.com/Calistus-design](https://github.com/Calistus-design)
-*   **Email:** [Calistusmwonga@gmail.com](mailto:Calistusmwonga@gmail.com) *(Replace with your actual email address)*
+*   **Email:** [calistusmwonga@gmail.com](mailto:calistusmwonga@gmail.com) 
 
 ---
 
