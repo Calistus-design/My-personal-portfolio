@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-**[Visit my live portfolio site here!](YOUR_VERCEL_DEPLOYMENT_URL_HERE)**
+**[Visit my live portfolio site here!](https://my-personal-portfolio-9ogz.vercel.app/)**
 
 ---
 
@@ -86,12 +86,9 @@ This application is designed for seamless deployment on platforms like Vercel.
 
 ## ✉️ Connect with Me
 
-*   **LinkedIn:** [linkedin.com/in/your-linkedin-profile](https://linkedin.com/in/your-linkedin-profile) *(Replace with your actual LinkedIn URL)*
+*   **LinkedIn:** [linkedin.com/in/your-linkedin-profile](https://www.linkedin.com/in/calistus-mwonga)
 *   **GitHub:** [github.com/Calistus-design](https://github.com/Calistus-design)
-*   **Email:** [your.email@example.com](mailto:your.email@example.com) *(Replace with your actual email address)*
+*   **Email:** [Calistusmwonga@gmail.com](mailto:Calistusmwonga@gmail.com) *(Replace with your actual email address)*
 
 ---
 
-## © License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
